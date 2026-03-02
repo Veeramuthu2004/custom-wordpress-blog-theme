@@ -1,0 +1,16 @@
+<?php
+
+
+function scp_form() {
+    ob_start();
+    ?>
+    <form method="post">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="submit" name="submit" value="Send" />
+    </form>
+    <?php
+    return ob_get_clean();
+}
+
+add_shortcode('simple_contact', 'scp_form');
